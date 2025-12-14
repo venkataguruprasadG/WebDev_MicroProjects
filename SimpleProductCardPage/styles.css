@@ -18,14 +18,21 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 24px;
+    flex-wrap: wrap;
 }
 
 .product-card {
     max-width: 300px;
     padding: 20px;
+
+    /* 🔑 REQUIRED FIX */
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
     background-color: white;
     border-radius: 5px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5)
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .product-card h2 {
@@ -46,8 +53,10 @@ h1 {
 }
 
 button {
-    display: block;
+    margin-top: auto;
+    /* pushes button to bottom */
     width: 100%;
+    padding: 10px;
     border: none;
     background-color: blue;
     border-radius: 5px;
@@ -57,5 +66,18 @@ button {
 
 button:hover {
     background-color: darkblue;
-    cursor: pointer
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 300px;
+    }
 }
