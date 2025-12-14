@@ -44,3 +44,13 @@ h1 {
     font-weight: bold;
     color: red;
 }
+
+button {
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
