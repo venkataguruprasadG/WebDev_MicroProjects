@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Day 3 ContactPage</title>
+</head>
+
+<body>
+    <h1>Contact Page</h1>
+    <p>These are the details if you want to contact me for work.</p>
+    <div class="contact-form">
+        <form action="/submit" method="post">
+            <label for="name">Name: </label>
+            <input type="text" for="name" name="name" required>
+            <br /><br />
+            <label for="email">Email: </label>
+            <input type="email" for="email" name="email" required>
+            <br /><br />
+            <label for="message">Message: </label>
+            <input type="text" for="message" name="message" required>
+            <br /><br />
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</body>
+
+</html>
