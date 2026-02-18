@@ -1,0 +1,83 @@
+body,
+html {
+    margin: 0;
+    height: 100%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.header {
+    padding: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.chat-area {
+    flex: 1;
+    /* takes up remaining space */
+    overflow-y: auto;
+    /* scrollable */
+    padding: 20px;
+    background-color: #2a2a2a;
+}
+
+.input-bar {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-top: 1px solid #333;
+    background-color: #1e1e1e;
+    align-items: center;
+}
+
+.input-bar input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+.input-bar button {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.input-bar button:hover {
+    background-color: #45a049;
+}
+
+.bubble {
+    max-width: 60%;
+    padding: 10px 15px;
+    margin: 8px;
+    border-radius: 12px;
+    color: white;
+    font-size: 14px;
+}
+
+/* AI bubbles */
+.bubble.ai {
+    align-self: flex-start;
+    /* left side */
+    background-color: #3a3a3a;
+    border-bottom-left-radius: 0;
+    /* tail effect */
+}
+
+/* User bubbles */
+.bubble.user {
+    align-self: flex-end;
+    /* right side */
+    background-color: #4caf50;
+    border-bottom-right-radius: 0;
+    /* tail effect */
+}
