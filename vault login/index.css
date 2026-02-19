@@ -1,0 +1,73 @@
+:root {
+    --primary-color: #ff0000;
+    /* Security Red */
+    --bg-dark: #2f4f4f;
+    /* Dark Slate Gray */
+    --vault-bg: #00008b;
+    /* Dark Blue */
+    --input-bg: #333333;
+    --text-light: #ffffff;
+}
+
+main {
+    background-color: darkslategray;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    padding: 20px;
+    border: 2px solid red;
+    border-radius: 10px;
+    background-color: darkblue;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input {
+    width: 250px;
+    height: auto;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 5px;
+    outline: none;
+}
+
+form input:focus {
+    border-color: red;
+    box-shadow: 0 0 5px red;
+}
+
+button {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+    border: none;
+}
+
+button:hover {
+    background-color: darkred;
+    color: white;
+}
+
+@media (max-width: 400px) {
+    .login {
+        width: 90%;
+        padding: 10px;
+    }
+
+    form input {
+        width: 100%;
+    }
+}
