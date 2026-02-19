@@ -12,13 +12,18 @@
     <main>
         <div class="login">
             <h1>The Vault Login</h1>
-            <form>
-                <input type="text" placeholder="enter your email" autocomplete="off">
-                <input type="password" placeholder="enter the password" autocomplete="off">
+            <form id="login-form">
+                <input type="text" id="email" placeholder="enter your email" autocomplete="off">
+                <input type="password" id="password" placeholder="enter the password" autocomplete="off">
+                <label>
+                    <input type="checkbox" id="showPassword">Show your password
+                </label>
                 <button type="submit">Login</button>
             </form>
+            <p id="errorMessage" style="color: yellow; font-weight: bold;"></p>
         </div>
     </main>
+    <script src="index.js"></script>
 </body>
 
 </html>
