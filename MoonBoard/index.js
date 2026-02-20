@@ -17,3 +17,10 @@ energeticbtn.addEventListener('click', function () {
     board.style.backgroundColor = 'orange';
     statustext.innerText = "Let's Go";
 });
+
+const resetButton = document.getElementById('reset-button');
+
+resetButton.addEventListener('click', function () {
+    board.style.backgroundColor = "#f4f4f4";
+    statustext.innerText = "Select mood";
+});
