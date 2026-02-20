@@ -6,22 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Moon Board</title>
     <style>
-        #board {
-            display: flexbox;
+        body {
+            display: flex;
+            margin: 0;
+            justify-content: center;
+            align-items: center;
             min-height: 100vh;
-            border: 2px solid black;
-            padding: 20px;
-            text-align: center;
-            background-color: #f4f4f4;
         }
 
-        #board button {
-            display: flexbox;
-            flex-direction: row;
-            gap: 20px;
-            cursor: pointer;
-            height: auto;
-            object-fit: cover;
+        #board {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            border: 2px solid black;
         }
     </style>
 </head>
