@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Moon Board</title>
+    <style>
+        #board {
+            display: flexbox;
+            min-height: 100vh;
+            border: 2px solid black;
+            padding: 20px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        #board button {
+            display: flexbox;
+            flex-direction: row;
+            gap: 20px;
+            cursor: pointer;
+            height: auto;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="board">
+        <h1>Current Mood</h1>
+        <p id="status-text">Select Mood</p>
+        <button style="background-color: yellow;" id="happy-btn">Happy</button>
+        <button style="background-color: lightblue;" id="calm-btn">Calm</button>
+        <button style="background-color: red;" id="energetic-btn">Energetic</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
