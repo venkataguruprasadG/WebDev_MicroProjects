@@ -48,6 +48,24 @@
         li {
             background-color: yellow;
             margin-bottom: 5px;
+            padding: 10px;
+            display: flex;
+            /* Make the li a flex container */
+            justify-content: space-between;
+            /* Push text to left, button to right */
+            align-items: center;
+            /* Keep them aligned in the middle */
+            border: 1px solid #ccc;
+        }
+
+        li button {
+            background-color: #ff4d4d;
+            /* Red for delete */
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
         }
     </style>
 </head>
@@ -64,14 +82,31 @@
             </ul>
         </div>
     </div>
-    <script src="index.js">
+    <script>
         const taskInput = document.getElementById('task-input');
         const addBtn = document.getElementById('add-btn');
         const taskList = document.getElementById('task-list');
 
         addBtn.addEventListener('click', function () {
+            if (taskInput.value !== "") {
+                const newTask = document.createElement('li');
+                newTask.innerText = taskInput.value + " ";
 
-        })
+                const delBtn = document.createElement('button');
+                delBtn.innerText = "Delete";
+
+                delBtn.addEventListener('click', function () {
+                    newTask.remove();
+                })
+                newTask.appendChild(delBtn);
+                taskList.appendChild(newTask);
+
+                taskInput.value = "";
+            }
+            else {
+                alert("please enter something.")
+            }
+        });
     </script>
 </body>
 
