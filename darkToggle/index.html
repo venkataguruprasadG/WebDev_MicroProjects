@@ -5,6 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dark Mode Toggle</title>
+    <style>
+        body {
+            background: white;
+            color: black;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .dark-mode {
+            background: black;
+            color: white;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            background: #eee;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+
+        .dark-mode button {
+            background: #333;
+            color: #eee;
+            border: 1px solid #555;
+        }
+    </style>
 </head>
 
 <body>
@@ -13,6 +40,18 @@
         <p>Enter into the dark mode using the toggle button here.</p>
         <button id="dark-theme-toggle">Switch Theme</button>
     </div>
+    <script>
+        const toggleButton = document.getElementById('dark-theme-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+
+            if (document.body.classList.contains('dark-mode')) {
+                toggleButton.innerText = 'Switch to Light Mode';
+            } else {
+                toggleButton.innerText = 'Switch to Dark Mode';
+            }
+        });
+    </script>
 </body>
 
 </html>
