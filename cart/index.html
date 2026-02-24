@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Mini Amazon Cart</title>
+</head>
+
+<body>
+    <div class="products" id="products">
+        <div class="product">
+            <h3>Cool Shirt</h3>
+            <p>$20</p>
+            <button class="add-to-cart" data-name="Shirt" data-price="20">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <h3>Cool Shoes</h3>
+            <p>$50</p>
+            <button class="add-to-cart" data-name="Shoes" data-price="50">Add to Cart</button>
+        </div>
+    </div>
+
+    <div id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items">
+            <li></li>
+        </ul>
+        <button id="btn-clear">Clear</button>
+        <hr>
+        <h3>Total: $<span id="total-price">0</span></h3>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
