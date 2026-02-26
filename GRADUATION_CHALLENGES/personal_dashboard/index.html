@@ -1,0 +1,40 @@
+<!--Your Final Challenge:
+Build a Personal Dashboard. It should have:
+
+The Digital Clock at the top.
+
+A Dark Mode toggle button.
+
+A Greeting that changes based on the time (e.g., "Good Morning" if hours < 12, 
+"Good Evening" if hours > 17).-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Personal Dashboard</title>
+</head>
+
+<body>
+    <div class="darkModeButton">
+        <button id="darkModeToggleButton">Toggle Dark Mode</button>
+    </div>
+    <div class="container">
+        <div class="greeting">
+            <h1 id="greetingMessage">
+                Welcome to your Personal Dashboard!
+            </h1>
+            <h2 id="greetingText"></h2>
+        </div>
+        <div class="clock">
+            <h2 id="time"></h2>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
