@@ -2,11 +2,23 @@ import Poster from './poster';
 
 function App() {
 
+  const crewMembers = [
+    { firstName: "Monkey D.", lastName: "Luffy", bounty: 1500000000, isOnline: true },
+    { firstName: "zoro", lastName: "Roronoa", bounty: 1100000000, isOnline: true },
+
+  ]
+
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-      <Poster firstName="Monkey D." lastName="Luffy" bounty={1500000000} isOnline={true} />
-      <Poster firstName="Zoro" lastName="Roronoa" bounty={1100000000} isOnline={true} />
-      <Poster firstName="Nami" lastName="thief" bounty={100000000} isOnline={true} />
+      {crewMembers.map((member, index) => (
+        <Poster
+          key={index}
+          firstName={member.firstName}
+          lastName={member.lastName}
+          bounty={member.bounty}
+          isOnline={member.isOnline}
+        />
+      ))}
     </div>
   );
 }
