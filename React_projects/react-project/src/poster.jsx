@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 function Poster({ firstName, lastName, bounty, isOnline }) {
     const statusColor = isOnline ? "green" : "red";
     return (
