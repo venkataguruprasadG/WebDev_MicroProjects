@@ -1,0 +1,131 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f0f0, #dfe9f3);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    padding: 40px;
+}
+
+/* Container */
+.container {
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+/* Heading */
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+/* Form Styling */
+#expense-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#expense-form input,
+#expense-form select,
+#expense-form button {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Input Focus */
+#expense-form input:focus,
+#expense-form select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
+
+/* Button Styling */
+#expense-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#expense-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Divider */
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* List Section */
+.list-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.list-section label {
+    font-weight: bold;
+    color: #444;
+}
+
+.list-section select {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Expense List */
+#expense-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#expense-list li {
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#expense-list li span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Total Amount */
+h3 {
+    text-align: right;
+    margin-top: 15px;
+    color: #222;
+}
+
+h3 span {
+    color: #007bff;
+    font-weight: bold;
+}
